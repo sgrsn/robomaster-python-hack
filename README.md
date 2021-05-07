@@ -17,19 +17,27 @@ RobomasterのGND, CANH, CANLをCANableと接続、機体後ろ側のLEDがやり
 
 とりあえず動かす
 
+```
 $ python3 rm_s1_hacker.py
+```
 
 JetsonにJoystickを接続して動かす
 
+```
 $ python3 joy_control.py
+```
 
 mqttを使用して遠隔で動かす
 
 Jetson側
 
+```
 $ mosquitto -p 1884
 $ python3 mqtt_control.py
+```
 
 操作側(windowsで確認)
 
+```
 $ python mqtt_joy_pub.py
+```
