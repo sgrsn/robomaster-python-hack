@@ -1,6 +1,6 @@
 # RoboMaster S1 をCANでハックするpythonのコードです
 
-![HackedMaster](https://github.com/sgrsn/robomaster_can_hack/images/HackedMaster.jpg)
+![HackedMaster](https://github.com/sgrsn/robomaster_can_hack/blob/main/images/HackedMaster.jpg)
 
 ## 要るもの
 
