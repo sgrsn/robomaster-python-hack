@@ -13,7 +13,15 @@
 
 Jetson nanoにCANableをUSBケーブルで接続
 
-RobomasterのGND, CANH, CANLをCANableと接続、機体後ろ側のLEDがやりやすい
+RobomasterのGND, CANH, CANLをCANableと接続
+
+カバーを開けるとLEDが取り出せるので、そこが接続しやすい
+
+![cover_open](https://github.com/sgrsn/robomaster_can_hack/blob/main/images/cover_open.jpg)
+
+ピン配置は以下のようになっています
+
+![connection](https://github.com/sgrsn/robomaster_can_hack/blob/main/images/connection.PNG)
 
 ## 動かし方
 
