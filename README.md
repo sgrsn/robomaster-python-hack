@@ -25,6 +25,12 @@ RobomasterのGND, CANH, CANLをCANableと接続
 
 ## 動かし方
 
+### モジュールのインストール
+
+```
+$ pip3 install pyserial python-can
+```
+
 とりあえず動かす
 
 ```
