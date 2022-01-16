@@ -31,6 +31,14 @@ RobomasterのGND, CANH, CANLをCANableと接続
 $ pip3 install pyserial python-can
 ```
 
+### can0のセットアップ
+
+```
+$ sudo slcand -o -c -s8 /dev/ttyACM0 can0
+$ sudo ifconfig can0 up
+$ sudo ifconfig can0 txqueuelen 1000
+```
+
 とりあえず動かす
 
 ```

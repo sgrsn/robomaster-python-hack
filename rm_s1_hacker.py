@@ -60,7 +60,7 @@ class RoboMasterHacker:
 
   def __init__(self):
     print("----------------------can open----------------------")
-    self.bus = can.interface.Bus(bustype='slcan', channel='/dev/ttyACM0', bitrate=1000000)
+    self.bus = can.interface.Bus('can0', bustype='socketcan')
     print("generated can bus")
 
     self.led_cmd_counter = 0x00
