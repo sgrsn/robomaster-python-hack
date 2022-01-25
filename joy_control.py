@@ -1,6 +1,6 @@
 import pygame
 from pygame.locals import *
-from rm_s1_hacker import *
+from lib import rm_s1_hacker
 import time
 import os
 
@@ -16,7 +16,7 @@ def joy_demo():
   joystick = pygame.joystick.Joystick(0)
   joystick.init()
 
-  hacker = RoboMasterHacker()
+  hacker = rm_s1_hacker.RoboMasterHacker()
   vx = 1024
   vy = 1024
   z = 1024
@@ -26,17 +26,16 @@ def joy_demo():
 
       for e in pygame.event.get():
         if e.type == pygame.locals.JOYAXISMOTION:
-          vx = 1024 - joystick.get_axis(1) * 300
-          vy = 1024 + joystick.get_axis(0) * 300
+          vx = 1024 - joystick.get_axis(1) * 500
+          vy = 1024 + joystick.get_axis(0) * 500
         elif e.type == pygame.locals.JOYBUTTONDOWN:
           print('buttin: ' + str(e.button) + ' pushed')
         elif e.type == pygame.locals.JOYBUTTONUP:
           print('button: ' + str(e.button) + ' released')
 
       hacker.receive_msg()
-
       hacker.send_touch_command()
-      hacker.send_joy_command(int(vx), int(vy), z)
+      hacker.send_joy_command(int(vx), int(vy), int(z))
         
   except KeyboardInterrupt:
     hacker.shutdown()
